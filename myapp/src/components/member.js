@@ -1,3 +1,14 @@
-const Member = () => ( <div><h2>This is Member Component</h2></div> );
+import { useParams } from 'react-router-dom';
+
+const Member = () => {
+  const { id } = useParams();
+  
+  return ( 
+    <div>
+      <h2>Member Details</h2>
+      <p>Member ID: { id }</p>
+    </div> 
+  );
+}
 
 export default Member;
