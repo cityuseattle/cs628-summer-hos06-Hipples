@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { MemoryRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Home from './components/home.js';
 import About from './components/about.js';
@@ -7,7 +7,7 @@ import Details from './components/details.js';
 import './App.css';
 
 const App = () => (
-  <BrowserRouter>
+  <MemoryRouter>
     <div className='container'>
       <nav className='navbar'>
         <ul>
@@ -24,7 +24,7 @@ const App = () => (
         </Routes>
       </div>
     </div>
-  </BrowserRouter>
+  </MemoryRouter>
 );
 
 export default App;
