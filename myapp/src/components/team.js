@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import { Link, Outlet, Navigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const Team = () => {
-  const [ redirectToHome, setRedirectToHome ] = useState(false);
+  let navigate = useNavigate();
 
-  const handleRedirectToHome = () => setRedirectToHome(true); 
-
-  if (redirectToHome) { return <Navigate to="/" /> }
+  const redirectToHome = () => navigate("/");
+  const goBack = () => navigate(-1);
 
   return (
     <div>
@@ -17,7 +15,9 @@ const Team = () => {
           <li><Link to="/team/member/2">Member 2</Link></li>
           <li><Link to="/team/member/3">Member 3</Link></li>
         </ul>
-        <button onClick={handleRedirectToHome}>Redirect to Home</button>
+        <button onClick={redirectToHome}>Redirect to Home</button>
+        <br /><br />
+        <button onClick={goBack}>Go Back</button>
       </div>
       <Outlet />
     </div>
