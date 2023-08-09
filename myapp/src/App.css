@@ -44,3 +44,10 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
 }
+
+.active {
+  color: #FFF;
+  background-color: #007BFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
